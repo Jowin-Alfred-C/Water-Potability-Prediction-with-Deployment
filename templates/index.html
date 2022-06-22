@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Water Potability Tester</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="{{ url_for('predict')}}"method="post">
+					<h3>Water Potability Tester</h3>
+					<p>Check whether the water is potable or not using this AI model <br>
+						Enter the necessary details below in float values
+					</p>
+
+					<label class="form-group">
+						<input type="number" step="any" name="Hardness" class="form-control"  required>
+						<span>Hardness</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" step="any" name="Solids" class="form-control"  required>
+						<span for="">Solids</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" step="any" name="Chloramines" class="form-control"  required>
+						<span for="">Chloramines</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" step="any" name="Sulfate" class="form-control"  required>
+						<span for="">Sulfate</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" step="any" name="Organic_carbon" class="form-control"  required>
+						<span for="">Organic_carbon</span>
+						<span class="border"></span>
+					</label>
+					<button type="submit">PREDICT
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<br>
+					<br>
+					<h3>{{ prediction_text }}</h3>
+					</form>
+			</div>
+		</div>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
