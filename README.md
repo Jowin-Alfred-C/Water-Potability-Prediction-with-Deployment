@@ -1,6 +1,7 @@
 # Water-Potability-Prediction-with-Deployment
 END to END Water Potability Prediction ML model with deployment on flask
 
+LIVE WEBAPP: ---> https://water-potability-predictor-ai.herokuapp.com
 
 OUTPUT:
 
